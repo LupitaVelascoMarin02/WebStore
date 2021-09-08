@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="WebStore" dynamic-insert="false" dynamic-update="false" mutable="true" name="classes.ArticlepOrder" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="articlep_order">
+        <id name="idArticlePOrder" type="java.lang.Integer">
+            <column name="IdArticleP_order"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="idArticle" optimistic-lock="true" type="int" unique="false">
+            <column name="IdArticle" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="idPOrder" optimistic-lock="true" type="int" unique="false">
+            <column name="IdP_order" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="number" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Number"/>
+        </property>
+    </class>
+</hibernate-mapping>
